@@ -1,0 +1,6 @@
+---
+- name: Desplegar Node Exporter en múltiples agentes
+  hosts: agents
+  become: yes
+  roles:
+    - node_exporter_deploy

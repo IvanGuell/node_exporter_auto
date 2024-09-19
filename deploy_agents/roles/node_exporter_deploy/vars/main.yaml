@@ -1,0 +1,20 @@
+---
+# Versión del node_exporter, se puede usar 'latest' o una versión específica.
+node_exporter_version: "1.7.0"
+node_exporter_arch: "amd64"
+
+# URL de descarga
+node_exporter_download_url: "https://github.com/prometheus/node_exporter/releases/download/v{{ node_exporter_version }}/node_exporter-{{ node_exporter_version }}.linux-{{ node_exporter_arch }}.tar.gz"
+
+# Ruta de instalación del binario
+node_exporter_bin_path: "/usr/local/bin/node_exporter"
+
+# Configuración de red y servicio
+node_exporter_host: "0.0.0.0"  # Escucha en todas las interfaces
+node_exporter_port: 9100
+node_exporter_options: ""  # Opciones adicionales para collectors
+
+# Estado del servicio
+node_exporter_state: "started"
+node_exporter_enabled: true
+node_exporter_restart: "on-failure"
